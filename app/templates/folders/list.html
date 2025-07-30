@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}My Folders | NoteIt{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2>My Folders</h2>
+  <a href="{{ url_for('folders.folder_create') }}" class="btn btn-primary">+ New Folder</a>
+</div>
+<div class="list-group">
+  <a href="{{ url_for('folders.folder_view', folder_id=1) }}" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Personal</h5>
+      <small>3 notes</small>
+    </div>
+    <p class="mb-1">Personal notes and ideas</p>
+  </a>
+  <a href="{{ url_for('folders.folder_view', folder_id=2) }}" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Work</h5>
+      <small>5 notes</small>
+    </div>
+    <p class="mb-1">Work-related notes and tasks</p>
+  </a>
+  <!-- More folders would be listed here -->
+</div>
+{% endblock %} 

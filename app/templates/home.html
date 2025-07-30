@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | NoteIt{% endblock %}
+
+{% block sidebar %}
+    <div class="d-flex flex-column">
+        <h5 class="mb-4"><a href="{{ url_for('folders.folders_list') }}" class="text-decoration-none text-dark">Folders</a></h5>
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="{{ url_for('folders.folder_view', folder_id=1) }}">Personal</a>
+            <a class="nav-link" href="{{ url_for('folders.folder_view', folder_id=2) }}">Work</a>
+            <a class="nav-link" href="{{ url_for('folders.folder_view', folder_id=3) }}">Ideas</a>
+        </nav>
+        <a href="{{ url_for('folders.folder_create') }}" class="btn btn-primary mt-4">+ New Folder</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <h1>Welcome to NoteIt</h1>
+    <p class="lead">Start by selecting a folder or creating a new note.</p>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Quick Start</h5>
+            <ul>
+                <li>Create folders to organize your notes</li>
+                <li>Write notes in markdown with live preview</li>
+                <li>Search, export, and manage your notes easily</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %} 

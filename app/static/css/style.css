@@ -1,0 +1,106 @@
+c/* Custom styles for Markdown Notes app */
+body {
+    background: linear-gradient(135deg, #e0ecff 0%, #b2f7ef 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222;
+}
+
+.navbar {
+    border-bottom: 1px solid #e5e5e5;
+    background: linear-gradient(90deg, #3a8dde 0%, #43e97b 100%);
+}
+
+.navbar .navbar-brand span {
+    color: #fff;
+}
+
+.navbar-logo {
+    height: auto;
+    max-height: 64px;
+    width: auto;
+    display: block;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #e0f7fa 0%, #b2f7ef 100%);
+    border-right: 1px solid #e5e5e5;
+    padding-top: 2rem;
+    transition: background 0.2s;
+}
+
+.sidebar .nav-link {
+    color: #226086;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+    background: #d0f0fd;
+    color: #3a8dde;
+}
+
+.main-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+    min-height: 80vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 2px solid #b2f7ef;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: #3a8dde;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #3a8dde 0%, #43e97b 100%);
+    border: none;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(58,141,222,0.08);
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #43e97b 0%, #3a8dde 100%);
+    color: #fff;
+}
+
+.card {
+    border: 1.5px solid #3a8dde;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(58,141,222,0.08);
+}
+.card-title {
+    color: #43e97b;
+}
+
+.form-control:focus {
+    border-color: #3a8dde;
+    box-shadow: 0 0 0 0.2rem rgba(58,141,222,0.08);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #e0ecff;
+}
+::-webkit-scrollbar-thumb {
+    background: #3a8dde;
+    border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .main-content {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+} 

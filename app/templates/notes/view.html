@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}View Note | NoteIt{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-7">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="mb-4">Sample Note Title</h2>
+        <div class="mb-4">
+          <div class="border rounded p-3 bg-light">
+            <em>Rendered markdown content will appear here...</em>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <a href="{{ url_for('notes.note_edit', note_id=note_id) }}" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-outline-danger">Delete</a>
+          <a href="{{ url_for('notes.note_export', note_id=note_id) }}" class="btn btn-outline-secondary">Export</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
