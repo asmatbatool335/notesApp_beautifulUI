@@ -1,2 +1,2 @@
-// Sidebar toggling and custom JS for Markdown Notes app
+// Sidebar toggling and custom JS for Markdown Documents app
 // (Add more interactivity as needed) 

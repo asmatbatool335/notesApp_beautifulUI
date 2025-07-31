@@ -10,12 +10,12 @@ def create_app() -> Flask:
     login_manager.init_app(app)
 
     from .auth import auth_bp
-    from .notes import notes_bp
+    from .documents import documents_bp
     from .folders import folders_bp
     from .main import main_bp
 
     app.register_blueprint(auth_bp)
-    app.register_blueprint(notes_bp, url_prefix='/notes')
+    app.register_blueprint(documents_bp, url_prefix='/documents')
     app.register_blueprint(folders_bp, url_prefix='/folders')
     app.register_blueprint(main_bp)
 

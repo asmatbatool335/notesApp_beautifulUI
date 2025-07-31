@@ -8,7 +8,8 @@ class User(db.Model, UserMixin):
     email: str = db.Column(db.String(120), unique=True, nullable=False)
     password_hash: str = db.Column(db.String(128), nullable=False)
     created_at: datetime = db.Column(db.DateTime, default=datetime.utcnow)
-    notes = db.relationship('Note', backref='user', lazy=True)
+    # TODO: Rename 'notes' relationship to 'documents' for full consistency
+    documents = db.relationship('Document', backref='user', lazy=True)
     folders = db.relationship('Folder', backref='user', lazy=True)
 
 class Folder(db.Model):
@@ -16,9 +17,10 @@ class Folder(db.Model):
     name: str = db.Column(db.String(100), nullable=False)
     user_id: int = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     created_at: datetime = db.Column(db.DateTime, default=datetime.utcnow)
-    notes = db.relationship('Note', backref='folder', lazy=True)
+    # TODO: Rename 'notes' relationship to 'documents' for full consistency
+    documents = db.relationship('Document', backref='folder', lazy=True)
 
-class Note(db.Model):
+class Document(db.Model):
     id: int = db.Column(db.Integer, primary_key=True)
     title: str = db.Column(db.String(200), nullable=False)
     content: str = db.Column(db.Text, nullable=False)

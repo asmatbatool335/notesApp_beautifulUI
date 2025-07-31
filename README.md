@@ -1,6 +1,6 @@
-# NoteIt
+# DocumentIt
 
-A beautiful, professional, multi-user markdown note-taking application built with Python Flask, SQLite, and a modern HTML/CSS/JS frontend.
+A beautiful, professional, multi-user markdown document-taking application built with Python Flask, SQLite, and a modern HTML/CSS/JS frontend.
 
 ---
 
@@ -15,7 +15,7 @@ A beautiful, professional, multi-user markdown note-taking application built wit
 ---
 
 ## Overview
-**NoteIt** is a desktop-style, multi-user note-taking app with a focus on beautiful, modern UI and a smooth user experience. It supports markdown notes, folders, search, and user authentication.
+**DocumentIt** is a desktop-style, multi-user document-taking app with a focus on beautiful, modern UI and a smooth user experience. It supports markdown documents, folders, search, and user authentication.
 
 ---
 
@@ -26,12 +26,12 @@ The front-end is built using Flask's Jinja2 templating system, Bootstrap 5, and 
 ### Main Components
 - **Navbar**: Always visible at the top, includes:
   - App logo (left-aligned, responsive, aspect-ratio preserved)
-  - Search bar (centered, always visible, for searching notes)
+  - Search bar (centered, always visible, for searching documents)
   - User actions (login/logout, right-aligned)
 - **Sidebar**: On the left, contains:
   - Folder navigation (list of folders, create new folder button)
 - **Main Content Area**: Displays:
-  - Welcome message or notes list/editor, depending on context
+  - Welcome message or documents list/editor, depending on context
   - Flash messages (e.g., search results, notifications)
 - **Responsive Design**: Layout adapts for desktop and mobile screens.
 
@@ -70,17 +70,17 @@ The front-end is built using Flask's Jinja2 templating system, Bootstrap 5, and 
 ## Planned Features
 - **User Registration**
 - **Full Authentication Flow** (registration, login, logout, password hashing)
-- **CRUD for Notes**
-  - Create, edit, delete, and view markdown notes
+- **CRUD for Documents**
+  - Create, edit, delete, and view markdown documents
   - Live markdown preview
 - **CRUD for Folders**
-  - Organize notes into folders
+  - Organize documents into folders
 - **Search**
-  - Search notes by title/content (backend integration)
+  - Search documents by title/content (backend integration)
 - **Export**
-  - Export notes as Markdown or HTML
+  - Export documents as Markdown or HTML
 - **User-Specific Data**
-  - All notes and folders scoped to the logged-in user
+  - All documents and folders scoped to the logged-in user
 - **Security**
   - CSRF protection, input validation, and secure endpoints
 - **Testing**

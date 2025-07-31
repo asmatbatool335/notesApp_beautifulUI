@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ 'Edit Note' if note else 'New Note' }} | NoteIt{% endblock %}
+{% block title %}{{ 'Edit Document' if document else 'New Document' }} | NoteIt{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
   <div class="col-md-8 col-lg-7">
     <div class="card shadow-sm">
       <div class="card-body">
-        <h2 class="mb-4 text-center">{{ 'Edit Note' if note else 'New Note' }}</h2>
+        <h2 class="mb-4 text-center">{{ 'Edit Document' if document else 'New Document' }}</h2>
         <form method="post">
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" required value="{{ note.title if note else '' }}">
+            <input type="text" class="form-control" id="title" name="title" required value="{{ document.title if document else '' }}">
           </div>
           <div class="mb-3">
             <label for="content" class="form-label">Content (Markdown)</label>
-            <textarea class="form-control" id="content" name="content" rows="10" required>{{ note.content if note else '' }}</textarea>
+            <textarea class="form-control" id="content" name="content" rows="10" required>{{ document.content if document else '' }}</textarea>
           </div>
           <div class="mb-3">
             <label class="form-label">Live Preview</label>
@@ -24,8 +24,8 @@
             </div>
           </div>
           <div class="d-flex justify-content-between">
-            <a href="{{ url_for('notes.notes_list') }}" class="btn btn-outline-secondary">Cancel</a>
-            <button type="submit" class="btn btn-primary">Save Note</button>
+            <a href="{{ url_for('documents.documents_list') }}" class="btn btn-outline-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Document</button>
           </div>
         </form>
       </div>

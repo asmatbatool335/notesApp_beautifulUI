@@ -15,8 +15,8 @@
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" width="80" class="me-2 navbar-logo">
             </a>
-            <form class="d-flex" style="width: 600px; margin-left: 100px;" action="{{ url_for('main.search_notes') }}" method="get" role="search">
-                <input class="form-control me-2" type="search" name="q" placeholder="Search notes..." aria-label="Search notes">
+            <form class="d-flex" style="width: 600px; margin-left: 100px;" action="{{ url_for('main.search_documents') }}" method="get" role="search">
+                <input class="form-control me-2" type="search" name="q" placeholder="Search documents..." aria-label="Search documents">
                 <button class="btn btn-outline-primary" type="submit">Search</button>
             </form>
         </div>

@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-notes_bp = Blueprint('notes', __name__)
+documents_bp = Blueprint('documents', __name__)
  
 from . import routes 

@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}Folder | NoteIt{% endblock %}
+{% block title %}My Documents | NoteIt{% endblock %}
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
-  <h2>Folder: Personal</h2>
+  <h2>My Documents</h2>
   <a href="{{ url_for('documents.document_create') }}" class="btn btn-primary">+ New Document</a>
 </div>
 <div class="list-group">
   <a href="{{ url_for('documents.document_view', document_id=1) }}" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Sample Document in Folder</h5>
+      <h5 class="mb-1">Sample Document Title</h5>
       <small>Last updated: 2025-07-28</small>
     </div>
     <p class="mb-1">This is a preview of the document content...</p>
   </a>
-  <!-- More documents in this folder would be listed here -->
+  <!-- More documents would be listed here -->
 </div>
 {% endblock %} 
